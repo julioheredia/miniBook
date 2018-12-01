@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<f:view>
+		<div
+			style="background: none repeat scroll 0% 0% #E1EAF0; width: 100%; height: 135%;">
+
+			<!-- 			<h:form id="editUser" enctype="multipart/form-data"> -->
+			<h:form id="editUser">
+				<div style="margin: 0em 5em; float: left;">
+
+					<div style="float: left;">
+
+						<h:outputText value="Dados do Usuario"
+							styleClass="accountSubTitle" />
+
+						<br />
+
+						<div style="float: left; margin: 1.4em 3.2em;">
+
+							<div style="float: left; margin: 0em 1em;">
+								<h:outputLabel value="Nome: " for="nome"
+									styleClass="accountLabel" />
+								<br />
+								<h:inputText id="nome" value="#{formLogged.usuarioLogged.nome}"
+									styleClass="accountInput" />
+							</div>
+
+							<div style="float: left; margin: 0em 1em;">
+								<h:outputLabel value="Sobrenome: " for="sobrenome"
+									styleClass="accountLabel" />
+								<br />
+								<h:inputText id="sobrenome"
+									value="#{formLogged.usuarioLogged.sobrenome}"
+									styleClass="accountInput" />
+							</div>
+
+							<br />
+							<div class="space" />
+
+							<div style="float: left; margin: 0em 1em;">
+								<h:outputLabel value="Email: " for="email"
+									styleClass="accountLabel" />
+								<br />
+								<h:inputText id="email"
+									value="#{formLogged.usuarioLogged.email}"
+									styleClass="accountInputLarge">
+								</h:inputText>
+							</div>
+
+							<br />
+							<div class="space" />
+
+							<div style="float: left; margin: 0em 1em;">
+								<h:outputLabel value="Data de Nascimento: "
+									styleClass="accountLabel" for="dias" />
+								<br />
+								<h:selectOneMenu id="dias" value="#{formLogged.dia}">
+									<f:selectItems value="#{formLogged.dias}" var="dia"
+										itemValue="#{dia}" itemLabel="#{dia}" />
+								</h:selectOneMenu>
+								<h:selectOneMenu id="meses" value="#{formLogged.mes}"
+									style="margin: 0em 1em !important;">
+									<f:selectItems value="#{formLogged.meses}" var="mes"
+										itemValue="#{mes}" itemLabel="#{mes}" />
+								</h:selectOneMenu>
+								<h:selectOneMenu id="anos" value="#{formLogged.ano}">
+									<f:selectItems value="#{formLogged.anos}" var="ano"
+										itemValue="#{ano}" itemLabel="#{ano}" />
+								</h:selectOneMenu>
+							</div>
+
+							<div style="float: left; margin: 0em 1em;">
+								<h:selectOneRadio id="sexo" value="#{formLogged.sexo}"
+									styleClass="accountSelectOneRadio">
+									<f:selectItem id="m" itemLabel="Masculino"
+										itemValue="MASCULINO" />
+									<f:selectItem id="f" itemLabel="Feminino" itemValue="FEMININO" />
+								</h:selectOneRadio>
+							</div>
+						</div>
+					</div>
+
+					<div style="float: left;">
+						<h:outputText value="Endereço" styleClass="accountSubTitle" />
+						<br />
+
+						<div style="float: left; margin: 1.4em 3.2em;">
+							<div style="float: left; margin: 0em 1em;">
+								<h:outputLabel value="Logradoro: " for="logradoro"
+									styleClass="accountLabel" />
+								<br />
+								<h:inputText id="logradoro"
+									value="#{formLogged.usuarioLogged.enderecoUsuario.logradoro}"
+									styleClass="accountInputLarge" />
+							</div>
+
+							<div style="float: left; margin: 0em 1em;">
+								<h:outputLabel value="Complemento: " for="complemento"
+									styleClass="accountLabel" />
+								<br />
+								<h:inputText id="complemento"
+									value="#{formLogged.usuarioLogged.enderecoUsuario.complemento}"
+									styleClass="accountInput" />
+							</div>
+
+							<div style="float: left; margin: 0em 1em;">
+								<h:outputLabel value="Bairro: " for="bairro"
+									styleClass="accountLabel" />
+								<br />
+								<h:inputText id="bairro"
+									value="#{formLogged.usuarioLogged.enderecoUsuario.bairro}"
+									styleClass="accountInput" />
+							</div>
+
+							<br />
+
+							<div style="float: left; margin: 0.4em 1em;">
+
+								<div style="float: left; margin: margin: 0em 1em;">
+									<h:outputLabel value="Cidade: " for="cidade"
+										styleClass="accountLabel" />
+									<br />
+									<h:inputText id="cidade"
+										value="#{formLogged.usuarioLogged.enderecoUsuario.cidade}"
+										styleClass="accountInput" />
+								</div>
+
+								<div style="float: left; margin: 0em 1em !important;">
+									<h:outputLabel value="Cep: " for="cep"
+										styleClass="accountLabel" />
+									<br />
+									<h:inputText id="cep"
+										value="#{formLogged.usuarioLogged.enderecoUsuario.cep}"
+										styleClass="accountInput" onkeypress="mask(this, mcep);"
+										onblur="mask(this, mcep);" />
+								</div>
+
+
+							</div>
+
+							<div style="float: left; margin: 0.4em 1em;">
+								<h:outputLabel value="UF: " styleClass="accountLabel" for="ufs" />
+								<br />
+								<h:selectOneMenu id="ufs"
+									value="#{formLogged.usuarioLogged.enderecoUsuario.uf}">
+									<f:selectItem itemValue="null" itemLabel="UF" />
+									<f:selectItems value="#{formLogged.estados}" var="uf"
+										itemValue="#{uf}" itemLabel="#{uf}" />
+								</h:selectOneMenu>
+							</div>
+
+
+							<div style="float: left; margin: 0.4em 1em;">
+								<h:outputLabel value="País: " styleClass="accountLabel"
+									for="paises" />
+								<br />
+								<h:selectOneMenu id="paises"
+									value="#{formLogged.usuarioLogged.enderecoUsuario.pais}">
+									<f:selectItem itemValue="null" itemLabel="País" />
+									<f:selectItems value="#{formLogged.paises}" var="pais"
+										itemValue="#{pais}" itemLabel="#{pais}" />
+								</h:selectOneMenu>
+							</div>
+
+						</div>
+					</div>
+
+					<div style="float: left;">
+
+						<h:outputText value="Informações" styleClass="accountSubTitle" />
+
+						<br />
+
+						<div style="float: left; margin: 1.4em 3.2em;">
+
+
+							<div style="float: left; margin: 0em 1em;">
+								<h:outputLabel value="Sobre você: " for="sobre"
+									styleClass="accountLabel" />
+								<br />
+
+								<h:inputTextarea id="sobre"
+									value="#{formLogged.usuarioLogged.dadosUsuario.sobre}"
+									styleClass="dadosAccountinputTextarea" />
+							</div>
+
+							<br />
+
+
+							<!-- 							<div style="float: left; margin: 0.4em 1em;"> -->
+							<!-- 								<h:outputLabel value="Foto Perfil: " for="fotoPerfil" -->
+							<!-- 									styleClass="accountLabel" /> -->
+							<!-- 								<br /> -->
+							<!-- 								<p:fileUpload id="fotoPerfil" value="#" mode="simple" /> -->
+							<!-- 							</div> -->
+
+							<div style="float: left; margin: 0.4em 1em;">
+								<h:outputLabel value="Telefone: " for="phone"
+									styleClass="accountLabel" />
+								<br />
+
+								<h:inputText id="phone"
+									value="#{formLogged.usuarioLogged.dadosUsuario.telefone}"
+									styleClass="accountInput" onkeypress="mask(this, mphone);"
+									onblur="mask(this, mphone);" />
+							</div>
+
+							<div style="float: left; margin: 0.4em 1em;">
+								<h:outputLabel value="Cidade Natal: " for="cidadeNatal"
+									styleClass="accountLabel" />
+								<br />
+
+								<h:inputText id="cidadeNatal"
+									value="#{formLogged.usuarioLogged.dadosUsuario.cidadeNatal}"
+									styleClass="accountInput" />
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<br />
+
+				<div style="margin: -1.5em 12em; float: left;">
+					<h:commandButton id="saveEditUsuario"
+						action="#{formLogged.editUsuario()}" value="Salvar"
+						styleClass="dadosAccountButton" />
+				</div>
+
+			</h:form>
+		</div>
+	</f:view>
+</ui:fragment>

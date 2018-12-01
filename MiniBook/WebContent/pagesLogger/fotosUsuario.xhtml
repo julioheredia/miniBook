@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<f:view>
+
+		<div style="width: 100%; float: left;">
+			<h:form id="uploadFotos">
+
+				<p:fileUpload id="fotosUpload"
+					fileUploadListener="#{formLogged.handleFileUpload}" mode="advanced"
+					dragDropSupport="false" multiple="true" />
+
+				<div style="margin: 1em 12em; float: left;">
+					<h:commandButton id="saveFotosUpload"
+						actionListener="#{formLogged.saveFotos()}" value="Salvar"
+						styleClass="dadosAccountButton" />
+				</div>
+			</h:form>
+		</div>
+
+		<div style="clear: both;"></div>
+
+		<br />
+
+		<div style="width: 100%; float: left; margin: 0em 25em;">
+			<p:galleria id="galeriaUser" value="#{formLogged.listImageUsuario}"
+				var="galeriaImage" panelWidth="500" panelHeight="313"
+				style="margin: 1em 30%;">
+
+				<p:graphicImage id="iteFotos" value="#{galeriaImage.image}"
+					style="width: 500px;height: 313px;" />
+
+			</p:galleria>
+		</div>
+
+	</f:view>
+</ui:fragment>

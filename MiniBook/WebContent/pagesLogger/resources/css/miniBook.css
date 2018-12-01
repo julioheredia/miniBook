@@ -1,0 +1,387 @@
+.loginLogo {
+	margin: 0em 2em;
+	height: 50px;
+	width: 236px;
+}
+
+.loginButton {
+	font-family: 'Freight Sans Bold', 'lucida grande', tahoma, verdana,
+		arial, sans-serif !important;
+	font-weight: normal !important;
+	text-rendering: optimizelegibility;
+	min-width: 144px;
+	text-align: center;
+	font-size: 19px;
+	line-height: 126%;
+	background: none repeat scroll 0% 0% #8ED77F;
+	border-color: rgb(44, 81, 21) !important;
+	border-width: 1px;
+	border-style: solid;
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	border-radius: 5px;
+	color: #FFF;
+	cursor: pointer;
+	display: inline-block;
+	letter-spacing: 1px;
+	position: relative;
+	text-shadow: 0px 1px 2px rgba(29, 122, 20, 0.5);
+}
+
+.loginLabel {
+	font-weight: normal;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+.loginInput {
+	padding-left: 5px;
+	margin: 0.2em !important;
+	border-color: #BDC7D8;
+	border-radius: 5px;
+	margin: 0px;
+	border: 1px solid #BDC7D8;
+	font-weight: normal;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	font-size: 11px;
+	width: 175px;
+	height: 25px;
+}
+
+.dadosAccountLogo {
+	margin: 0em 2em;
+	height: 30px;
+	width: 142px;
+}
+
+.dadosAccountTop {
+	background: none repeat scroll 0% 0% #FFF;
+	border-width: 1px;
+	border-bottom: 1px none rgba(145, 145, 167, 0.27);
+	box-shadow: 0px 0px 5px rgba(6, 11, 35, 0.7);
+	width: 100%;
+	height: 32px;
+	border-radius: 2px;
+	margin: 0em;
+	float: left;
+}
+
+.dadosAccountContent {
+	background: #E1EAF0;
+	width: 100%;
+	height: 100%;
+}
+
+.accountTitle {
+	color: #141823;
+	font-family: 'Freight Sans Bold', 'lucida grande', tahoma, verdana,
+		arial, sans-serif;
+	font-size: 40px;
+	font-weight: normal;
+	white-space: nowrap;
+	color: #B6BF79;
+}
+
+.accountSubTitle {
+	margin: 2em !important;
+	font-family: 'Freight Sans Bold', 'lucida grande', tahoma, verdana,
+		arial, sans-serif;
+	font-size: 25px;
+	font-weight: normal;
+	white-space: nowrap;
+	color: rgba(107, 110, 90, 1);
+}
+
+.dadosAccountinputTextarea {
+	padding-left: 5px;
+	margin: 0.2em !important;
+	border-radius: 5px;
+	border: 1px solid #BDC7D8;
+	font-weight: normal;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	font-size: 11px;
+	width: 570px;
+	height: 100px;
+}
+
+.accountInputLarge {
+	padding-left: 5px;
+	margin: 0.2em !important;
+	width: 390px;
+	height: 35px;
+	border-color: #BDC7D8;
+	border-radius: 5px;
+	margin: 0px;
+	border: 1px solid #BDC7D8;
+	font-size: 16px;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+}
+
+.dadosAccountButton {
+	font-family: 'Freight Sans Bold', 'lucida grande', tahoma, verdana,
+		arial, sans-serif !important;
+	font-weight: normal !important;
+	text-rendering: optimizelegibility;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	min-width: 194px;
+	padding: 7px 20px;
+	text-align: center;
+	font-size: 19px;
+	line-height: 126%;
+	background: none repeat scroll 0% 0% #E67E55;
+	border-color: rgb(44, 81, 21) !important;
+	border-width: 1px;
+	border-style: solid;
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	border-radius: 5px;
+	color: #FFF;
+	cursor: pointer;
+	display: inline-block;
+	letter-spacing: 1px;
+	position: relative;
+	text-shadow: 0px 1px 2px rgba(51, 18, 25, 0.5);
+}
+
+.accountContent {
+	position: relative;
+	min-width: 1100px;
+	background: rgba(225, 234, 240, 1);
+	border-width: 1px;
+	border-style: solid;
+	margin: 0.5em 8em;
+	border-color: rgba(250, 250, 250, 0.27) #8E8AA7;
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px rgba(6, 11, 35, 0.7);
+}
+
+.space {
+	margin: 3em 5em !important;
+}
+
+.accountLabel {
+	margin: 0em !important;
+	font-size: 18px;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	color: #342456;
+	float: left;
+}
+
+.accountInput {
+	padding-left: 5px;
+	margin: 0.2em !important;
+	width: 190px;
+	height: 35px;
+	border-color: #BDC7D8;
+	border-radius: 5px;
+	margin: 0px;
+	border: 1px solid #BDC7D8;
+	font-size: 16px;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+}
+
+.accountInputLarge {
+	padding-left: 5px;
+	margin: 0.2em !important;
+	width: 390px;
+	height: 35px;
+	border-color: #BDC7D8;
+	border-radius: 5px;
+	margin: 0px;
+	border: 1px solid #BDC7D8;
+	font-size: 16px;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+}
+
+.accountMessageBox {
+	opacity: 1;
+	background: none repeat scroll 0% 0% rgba(217, 218, 242, 1);
+	border: 1px solid rgba(43, 22, 183, 1);
+	margin: 10px 0px 0px;
+	overflow: hidden;
+	line-height: 30px !important;
+	text-align: center;
+	height: 30px;
+	width: 400px;
+}
+
+.accountSelectOneRadio {
+	padding-left: 5px;
+	font-size: 16px !important;
+	font-family: 'lucida grande', tahoma, verdana, arial,
+		sans-serif !important;
+	color: #342456 !important;
+}
+
+.accountButton {
+	font-family: 'Freight Sans Bold', 'lucida grande', tahoma, verdana,
+		arial, sans-serif !important;
+	font-weight: normal !important;
+	text-rendering: optimizelegibility;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	min-width: 194px;
+	padding: 7px 20px;
+	text-align: center;
+	font-size: 19px;
+	line-height: 126%;
+	background: #B24926;
+	border-color: #2C5115 !important;
+	border: 1px solid;
+	border-radius: 5px;
+	color: #FFF;
+	cursor: pointer;
+	display: inline-block;
+	letter-spacing: 1px;
+	position: relative;
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.loggedLoginLogo {
+	height: 50px;
+	width: 236px;
+}
+
+.loggedTop {
+	background: none repeat scroll 0% 0% #FFF;
+	border-width: 1px;
+	border-bottom: 1px none rgba(145, 145, 167, 0.27);
+	box-shadow: 0px 0px 5px rgba(6, 11, 35, 0.7);
+	width: 100%;
+	height: 60px;
+	border-radius: 2px;
+	margin: 0em;
+	float: left;
+}
+
+.loggedContent {
+	background: #E1EAF0;
+	width: 100%;
+	height: 100%;
+}
+
+.loggedUserImage {
+	border: 0px none;
+	border-radius: 0px;
+	height: 30px;
+	width: 30px;
+}
+
+.loggedName {
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma,
+		verdana, arial, sans-serif;
+	text-shadow: 0px -1px rgba(0, 0, 0, 0.5);
+	font-size: 12px;
+	line-height: 27px;
+}
+
+.logOutButton {
+	font-family: 'Freight Sans Bold', 'lucida grande', tahoma, verdana,
+		arial, sans-serif !important;
+	font-weight: normal !important;
+	text-rendering: optimizelegibility;
+	min-width: 144px;
+	text-align: center;
+	font-size: 19px;
+	line-height: 126%;
+	background: none repeat scroll 0% 0% rgba(249, 130, 117, 1);
+	border-color: rgb(44, 81, 21) !important;
+	border-width: 1px;
+	border-style: solid;
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	border-radius: 5px;
+	color: #FFF;
+	cursor: pointer;
+	display: inline-block;
+	letter-spacing: 1px;
+	position: relative;
+	text-shadow: 0px 1px 2px rgba(29, 122, 20, 0.5);
+}
+
+.post {
+	border: 10px none;
+	background: none repeat scroll 0% 0% #FFF;
+	margin: 20px;
+	padding: 20px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	position: relative;
+}
+
+.postButton {
+	font-family: 'Freight Sans Bold', 'lucida grande', tahoma, verdana,
+		arial, sans-serif !important;
+	font-weight: normal !important;
+	text-rendering: optimizelegibility;
+	min-width: 144px;
+	text-align: center;
+	font-size: 19px;
+	line-height: 126%;
+	background: none repeat scroll 0% 0% rgba(159, 154, 183, 1);
+	border-color: rgba(29, 21, 81, 1) !important;
+	border-width: 1px;
+	border-style: solid;
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	border-radius: 5px;
+	color: #FFF;
+	cursor: pointer;
+	display: inline-block;
+	letter-spacing: 1px;
+	position: relative;
+	text-shadow: 0px 1px 2px rgba(37, 20, 122, 0.5);
+	float: right;
+	margin-top: 10px;
+	margin-bottom: -10px;
+}
+
+.loggedName {
+	font-family: 'Freight Sans Bold', 'lucida grande', tahoma, verdana,
+		arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	white-space: nowrap;
+	color: #8D4022;
+}
+
+.fotosButton {
+	font-family: 'Freight Sans Bold', 'lucida grande', tahoma, verdana,
+		arial, sans-serif !important;
+	font-weight: normal !important;
+	text-rendering: optimizelegibility;
+	min-width: 144px;
+	text-align: center;
+	font-size: 19px;
+	line-height: 126%;
+	background: none repeat scroll 0% 0% rgba(63, 69, 62, 1);
+	border-color: rgba(112, 171, 110, 1) !important;
+	border-width: 1px;
+	border-style: solid;
+	-moz-border-top-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	border-image: none;
+	border-radius: 5px;
+	color: #FFF;
+	cursor: pointer;
+	display: inline-block;
+	letter-spacing: 1px;
+	position: relative;
+	text-shadow: 0px 1px 2px rgba(119, 225, 108, 0.5);
+}
+}

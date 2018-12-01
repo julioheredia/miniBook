@@ -1,0 +1,78 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+		<title>MiniBook</title>
+		<link rel="stylesheet" type="text/css"
+			href="resources/css/miniBook.css" />
+		<link rel="icon" href="resources/images/m.png" type="image/ico" />
+	</h:head>
+
+	<h:body style="float: left; margin: 0em 0em; background: #E1EAF0;">
+
+		<f:view>
+			<div id="logotopo" class="loggedTop">
+
+				<div style="margin: 0em 7em; float: left;">
+					<div style="float: left;">
+						<h:form id="homeUser">
+							<h:commandLink id="home" action="#{formLogged.goToPrincipal()}">
+								<h:graphicImage id="logoLogin" value="resources/images/logo.png"
+									styleClass="loggedLoginLogo" />
+							</h:commandLink>
+						</h:form>
+					</div>
+
+					<div style="float: left; margin: 19px 150px;">
+						<h:form id="editarUser">
+							<h:commandLink id="edUser"
+								action="#{formLogged.goToEditUsuario()}"
+								style="text-decoration:none; color: black; ">
+								<h:graphicImage id="fotoPerfil" value="#{formLogged.fotoPerfil}"
+									styleClass="loggedUserImage" />
+								<h:outputLabel id="labeleditarUser"
+									value="#{formLogged.usuarioLogged.nome}"
+									styleClass="loggedName" for="fotoPerfil" />
+							</h:commandLink>
+						</h:form>
+					</div>
+
+
+					<div style="float: left; margin: 19px 30px;">
+						<h:form id="fotosForm">
+							<h:commandButton id="fotosButton"
+								action="#{formLogged.goToFotosUsuario()}" value="Fotos"
+								styleClass="fotosButton" />
+						</h:form>
+					</div>
+
+					<div style="float: right; margin: 19px 0px;">
+						<h:form id="logOutForm">
+							<h:commandButton id="logOut" action="#{formLogged.logOut()}"
+								value="Sair" styleClass="logOutButton" />
+						</h:form>
+					</div>
+
+					<div style="margin: 0em 100%; float: left;" />
+
+				</div>
+			</div>
+
+			<div id="content" class="base">
+				<div id="quadro_buscar">
+					<ui:insert name="principal">
+						<ui:include src="#{formLogged.contentPage}" />
+					</ui:insert>
+
+					<div style="clear: both;"></div>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+
+		</f:view>
+	</h:body>
+</ui:composition>

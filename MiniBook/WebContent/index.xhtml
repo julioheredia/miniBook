@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+		<title>MiniBook</title>
+		<link rel="stylesheet" type="text/css"
+			href="resources/css/miniBook.css" />
+		<link rel="icon" href="resources/images/m.png" type="image/ico" />
+	</h:head>
+
+	<h:body>
+
+		<div>
+
+			<div style="margin: 0em 7em; float: left;">
+				<h:graphicImage id="logo" value="resources/images/logo.png"
+					styleClass="loginLogo" />
+			</div>
+
+			<div style="float: left; margin: 0em 6em !important;">
+				<h:form id="login">
+					<div style="float: left;">
+						<h:outputLabel value="Email" for="emailLogin"
+							styleClass="loginLabel" />
+						<br />
+						<h:inputText id="emailLogin" value="#{formLogin.email}"
+							styleClass="loginInput" />
+					</div>
+					<div style="float: left;">
+						<h:outputLabel value="Senha" for="senhaLogin"
+							styleClass="loginLabel" />
+						<br />
+						<h:inputSecret id="senhaLogin" value="#{formLogin.password}"
+							styleClass="loginInput" />
+					</div>
+
+					<div style="float: left; margin: 0.8em 2em !important;">
+						<h:commandButton id="loginUsuario" action="#{formLogin.login()}"
+							value="Entrar" styleClass="loginButton">
+<!-- 							<f:ajax render="msg" /> -->
+						</h:commandButton>
+<!-- 						<p:messages id="msg" autoUpdate="true" showDetail="true" /> -->
+					</div>
+				</h:form>
+			</div>
+
+		</div>
+
+		<div style="float: left;">
+
+			<div class="accountContent">
+				<h:form id="accountUsuario">
+
+					<h:panelGroup id="accountUsuarioGroup" layout="block"
+						style="margin: 1em 5em !important;">
+
+						<h:outputText value="Faça seu cadastro" styleClass="accountTitle" />
+						<br />
+
+
+						<div style="margin: 0em 5em !important;" />
+
+						<h:panelGroup id="messageValidateGroup">
+							<h:panelGroup id="messageValidate" layout="block"
+								rendered="#{formLogin.accountUsuarioErro}"
+								styleClass="accountMessageBox">
+								<h:outputText value="#{formLogin.messageValidate}" />
+							</h:panelGroup>
+						</h:panelGroup>
+						<br />
+
+						<div style="margin: 0em 5em !important;" />
+
+						<div style="float: left;">
+							<h:outputLabel value="Nome: *" for="nome"
+								styleClass="accountLabel" />
+							<br />
+							<h:inputText id="nome" value="#{formLogin.usuario.nome}"
+								styleClass="accountInput" />
+						</div>
+
+						<div style="float: left;">
+							<h:outputLabel value="Sobrenome: *" for="sobrenome"
+								styleClass="accountLabel" />
+							<br />
+							<h:inputText id="sobrenome"
+								value="#{formLogin.usuario.sobrenome}" styleClass="accountInput" />
+						</div>
+
+						<br />
+						<div class="space" />
+
+						<div style="float: left;">
+							<h:outputLabel value="Email: *" for="email"
+								styleClass="accountLabel" />
+							<br />
+							<h:inputText id="email" value="#{formLogin.usuario.email}"
+								styleClass="accountInputLarge">
+								<f:validator validatorId="emailValidator" />
+								<f:ajax render=":accountUsuario:messageValidateGroup" />
+							</h:inputText>
+						</div>
+
+						<br />
+						<div class="space" />
+
+						<div style="float: left;">
+							<h:outputLabel value="Senha: *" for="password"
+								styleClass="accountLabel" />
+							<br />
+							<h:inputSecret id="password"
+								value="#{formLogin.usuario.password}"
+								styleClass="accountInputLarge">
+								<f:validator validatorId="passwordValidator" />
+								<f:attribute name="confirmPassword" value="#{confirmPassword}" />
+							</h:inputSecret>
+						</div>
+
+						<br />
+						<div class="space" />
+
+						<div style="float: left;">
+							<h:outputLabel value="Confirmação de Senha: *"
+								for="confirmPassword" styleClass="accountLabel" />
+							<br />
+							<h:inputSecret id="confirmPassword" binding="#{confirmPassword}"
+								styleClass="accountInputLarge">
+								<f:ajax render=":accountUsuario:messageValidateGroup" />
+							</h:inputSecret>
+						</div>
+
+						<br />
+						<div class="space" />
+
+						<div style="float: left;">
+							<h:outputLabel value="Data de Nascimento: *"
+								styleClass="accountLabel" for="dias" />
+							<br />
+							<h:selectOneMenu id="dias" value="#{formLogin.dia}">
+								<f:selectItems value="#{formLogin.dias}" var="dia"
+									itemValue="#{dia}" itemLabel="#{dia}" />
+							</h:selectOneMenu>
+							<h:selectOneMenu id="meses" value="#{formLogin.mes}"
+								style="margin: 0em 1em !important;">
+								<f:selectItems value="#{formLogin.meses}" var="mes"
+									itemValue="#{mes}" itemLabel="#{mes}" />
+							</h:selectOneMenu>
+							<h:selectOneMenu id="anos" value="#{formLogin.ano}">
+								<f:selectItems value="#{formLogin.anos}" var="ano"
+									itemValue="#{ano}" itemLabel="#{ano}" />
+							</h:selectOneMenu>
+						</div>
+
+						<br />
+						<div class="space" />
+						<div style="float: left;">
+							<h:selectOneRadio id="sexo" value="#{formLogin.sexo}"
+								styleClass="accountSelectOneRadio">
+								<f:selectItem id="m" itemLabel="Masculino" itemValue="MASCULINO" />
+								<f:selectItem id="f" itemLabel="Feminino" itemValue="FEMININO" />
+							</h:selectOneRadio>
+						</div>
+
+						<br />
+						<div style="margin: 1em 1em !important;">
+							<h:commandButton id="saveUsuario"
+								action="#{formLogin.dadosUsuario()}" value="Criar uma Conta"
+								styleClass="accountButton" />
+						</div>
+
+					</h:panelGroup>
+
+				</h:form>
+
+			</div>
+		</div>
+
+	</h:body>
+
+</ui:composition>

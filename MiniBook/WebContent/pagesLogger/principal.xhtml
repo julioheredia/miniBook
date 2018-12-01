@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<f:view>
+		<div>
+			<h:form id="postForm">
+				<p:poll interval="5" listener="#{formLogged.refreshList()}"
+					update="imagesPostgroup" />
+				<h:panelGroup id="postImageFormGroup" style="float: left;">
+
+					<div style="min-width: 700px; width: 50%; padding: 0em 24%">
+						<fieldset class="post" style="margin: 10px 0px;">
+							<h:inputTextarea value="#{formLogged.post}"
+								style="width: 100%; height: 150px;" />
+
+							<h:commandButton id="postarPost"
+								action="#{formLogged.sendPost()}" value="Postar"
+								styleClass="postButton">
+								<!-- 							<f:ajax render=":postForm:postImageFormGroup" /> -->
+							</h:commandButton>
+
+						</fieldset>
+					</div>
+
+					<div
+						style="min-width: 700px; width: 50%; height: 50%; padding: 0em 24%">
+						<h:panelGroup id="imagesPostgroup">
+							<ui:repeat var="pi" value="#{formLogged.listPostImage}"
+								varStatus="status">
+
+								<fieldset class="post" style="margin: 10px 0px;">
+									<h:outputText value="#{pi.user}" styleClass="loggedName" />
+
+									<p:spacer width="15"/>
+
+									<h:outputText value="Publicado em: " styleClass="loggedName" />
+									<h:outputText value="#{pi.dataCreation}"
+										styleClass="loggedName">
+										<f:convertDateTime pattern="dd/MM/yyyy HH:mm" />
+									</h:outputText>
+
+									<h:graphicImage value="#{pi.image}"
+										rendered="#{pi.image != null}"
+										style="width: 100%; height: 100%;" />
+									<h:inputText value="#{pi.post}" rendered="#{pi.post != null}"
+										style="width: 100%;" />
+								</fieldset>
+							</ui:repeat>
+						</h:panelGroup>
+					</div>
+				</h:panelGroup>
+			</h:form>
+		</div>
+	</f:view>
+</ui:fragment>

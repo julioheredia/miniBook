@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<h:head>
+		<title>Confirmação de Cadastro de Usuario</title>
+		<link rel="stylesheet" type="text/css"
+			href="resources/css/miniBook.css" />
+		<link rel="icon" href="resources/images/m.png" type="image/ico" />
+	</h:head>
+
+	<h:body>
+
+		<div>
+
+			<div style="margin: 0em 7em; float: left;">
+				<h:graphicImage id="logoLogin" value="resources/images/logo.png"
+					styleClass="loginLogo" />
+			</div>
+
+			<div style="float: left; margin: 0em 6em !important;">
+				<h:form id="loginPost">
+					<div style="float: left;">
+						<h:outputLabel value="Email" for="emailLogin"
+							styleClass="loginLabel" />
+						<br />
+						<h:inputText id="emailLogin" value="#{formLogin.email}"
+							styleClass="loginInput" />
+					</div>
+					<div style="float: left;">
+						<h:outputLabel value="Senha" for="senhaLogin"
+							styleClass="loginLabel" />
+						<br />
+						<h:inputSecret id="senhaLogin" value="#{formLogin.password}"
+							styleClass="loginInput" />
+					</div>
+
+					<div style="float: left; margin: 0.8em 2em !important;">
+						<h:commandButton id="loginUsuario" action="#{formLogin.login()}"
+							value="Entrar" styleClass="loginButton" />
+					</div>
+				</h:form>
+			</div>
+
+		</div>
+
+		<div style="float: left;">
+
+			<div class="accountContent" style="height: 500px;">
+
+				<br />
+				<h:outputText value="Parabéns seu cadastro foi feito com sucesso !"
+					styleClass="accountTitle" style="padding: 1em;" />
+
+				<br /> <br />
+				<h:outputText value="Faça o seu login" styleClass="accountSubTitle"
+					style="padding: 3em 1em;" />
+
+				<br />
+
+
+			</div>
+		</div>
+
+	</h:body>
+
+</ui:composition>
